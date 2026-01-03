@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slicing UniPlay - Capability Testing</title>
+    <style>
+        /* CSS MANUAL - BEKERJA OFFLINE & ONLINE */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header / Nav */
+        .navbar {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-weight: 900; font-size: 24px; font-style: italic; letter-spacing: -1px; }
+        .orange-text { color: #f37021; }
+
+        /* Banner */
+        .banner-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .banner-box {
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 4px solid white;
+        }
+        .banner-box img { width: 100%; display: block; }
+
+        /* Grid Game */
+        .section-container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            border-left: 6px solid #f37021;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .grid-game {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        @media (min-width: 768px) { .grid-game { grid-template-columns: repeat(4, 1fr); } }
+
+        .game-card {
+            background: white;
+            padding: 12px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .game-card:hover { transform: translateY(-10px); }
+        .game-card img { width: 100%; border-radius: 20px; margin-bottom: 10px; }
+        .game-card p { font-weight: bold; margin: 10px 0; font-size: 14px; }
+
+        /* Footer Orange */
+        .footer-orange {
+            background-color: #f37021;
+            color: white;
+            padding: 70px 20px;
+            margin-top: 80px;
+        }
+        .footer-content { max-width: 1100px; margin: 0 auto; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        @media (min-width: 768px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+        .feature-item h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 14px; }
+        .feature-item p { font-size: 12px; opacity: 0.9; line-height: 1.6; }
+
+        /* Payment Section */
+        .payment-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            opacity: 0.6;
+            filter: grayscale(1);
+            margin: 40px 0;
+        }
+        .payment-logos img { height: 35px; }
+        .footer-links { margin-top: 40px; font-size: 12px; }
+        .footer-links a { color: #f37021; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">LOGO <span class="orange-text">BEBAS</span></div>
+        <div style="font-size: 24px; color: #f37021;">☰</div>
+    </div>
+
+    <div class="banner-container">
+        <div class="banner-box">
+            <img src="Ramadan-Barokah-1200x628px-1024x536.jpg" alt="Banner Promo">
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-title">Game Populer</div>
+        <div class="grid-game">
+            <div class="game-card">
+                <img src="j.png" alt="ML">
+                <p>Mobile Legends</p>
+            </div>
+            <div class="game-card">
+                <img src="60bf039b4151b.png" alt="FF">
+                <p>Garena Free Fire</p>
+            </div>
+            <div class="game-card">
+                <img src="j.png" alt="ML">
+                <p>Mobile Legends</p>
+            </div>
+            <div class="game-card">
+                <img src="60bf039b4151b.png" alt="FF">
+                <p>Garena Free Fire</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-title">Top Up Game Langsung</div>
+        <div class="grid-game">
+            <div class="game-card"><img src="j.png" alt="ML"><p>Mobile Legends</p></div>
+            <div class="game-card"><img src="60bf039b4151b.png" alt="FF"><p>Garena Free Fire</p></div>
+            <div class="game-card"><img src="j.png" alt="ML"><p>Mobile Legends</p></div>
+            <div class="game-card"><img src="60bf039b4151b.png" alt="FF"><p>Garena Free Fire</p></div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="grid-game">
+            <div class="game-card"><img src="j.png" alt="ML"><p>Mobile Legends</p></div>
+            <div class="game-card"><img src="60bf039b4151b.png" alt="FF"><p>Garena Free Fire</p></div>
+            <div class="game-card"><img src="j.png" alt="ML"><p>Mobile Legends</p></div>
+            <div class="game-card"><img src="60bf039b4151b.png" alt="FF"><p>Garena Free Fire</p></div>
+        </div>
+    </div>
+
+<div class="footer-orange">
+        <div class="footer-content">
+            <h3 style="margin-bottom: 20px;">UniPlay: Website top-up game paling terpercaya di Indonesia</h3>
+            <p style="font-size: 14px; line-height: 1.6; opacity: 0.9;">Setiap harinya, ribuan gamers di Indonesia menggunakan UniPlay untuk melakukan top up game dengan lancar, tanpa perlu daftar atau login, dan diamond/token game akan dikirimkan secara instan ke akun game anda.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>✓ Jujur & Terpercaya</h4>
+                    <p>Setiap hari ada ribuan transaksi top up game atau pembelian voucher yang dilakukan oleh pelanggan kami.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Metode Pembayaran Lengkap</h4>
+                    <p>Kami menawarkan begitu banyak pilihan channel pembayaran, mulai dari bank transfer, gopay, ovo, shopeepay, dan lainnya.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Pengiriman Instan</h4>
+                    <p>Hanya butuh beberapa detik saja untuk menyelesaikan transaksi anda. Semua proses kami berjalan otomatis.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Pasti Lebih Murah</h4>
+                    <p>Top up game favoritmu dengan harga yang pastinya lebih murah dibandingkan website top-up lainnya.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="payment-section">
+        <div style="font-size: 11px; color: #888; letter-spacing: 3px; font-weight: bold; margin-bottom: 20px;">METODE PEMBAYARAN</div>
+        <div class="payment-logos">
+            <img src="bca-bank-central-asia-logo-png_seeklogo-399949.png" alt="BCA">
+            <img src="bank-mandiri-logo-png_seeklogo-16290.png" alt="Mandiri">
+            <img src="gopay-logo-png_seeklogo-369813.png" alt="Gopay">
+            <img src="ovo-e-wallet-logo-png_seeklogo-399952.png" alt="OVO">
+            <img src="shopeepay-logo-png_seeklogo-504054.png" alt="ShopeePay">
+        </div>
+        <p style="color: #bbb; font-size: 11px; margin-top: 50px;">© 2021 UniPlay Indonesia</p>
+        <div class="footer-links">
+            <p style="color: #888; margin-bottom: 20px;">
+            <a href="#">HUBUNGI KAMI</a>
+            <a href="#">SYARAT & KETENTUAN</a>
+            <a href="#">KETENTUAN REFUND</a>
+        </div>
+    </div>
+
+</body>
+</html>
